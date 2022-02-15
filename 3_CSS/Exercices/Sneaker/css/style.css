@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    border-spacing: border-size;
+    box-sizing: border-box;
 }
 
 body{
@@ -27,7 +27,7 @@ body{
     align-items: center;
     margin:1rem 0 1rem 0;
     height : 80px;
-    border-bottom: 1px solid var(--light-grayish-blue);
+    border-bottom: 2px solid var(--light-grayish-blue);
     
 }
 .nav-left{
@@ -60,6 +60,7 @@ body{
 .sneaker{
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .nav-links{
@@ -149,6 +150,7 @@ body{
 
 .sneaker-info{
     font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
     /* border: 1px solid red; */
 }
 
@@ -162,7 +164,7 @@ body{
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 28pt;
     color: var(--black);
-    font-style: bold;
+    font-weight: bold;
 }
 
 .blank{
@@ -171,7 +173,7 @@ body{
 
 .sneaker-info-description{
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 7pt;
+    font-size: 10pt;
     text-decoration: none;
     color: var(--dark-grayish-blue);
 }
@@ -179,6 +181,7 @@ body{
 .sneaker-info-price{
     /* border: 1px solid red; */
     height : 10%;
+    font-weight: bold;
 
     display: flex;
     align-items: center;
@@ -188,7 +191,6 @@ body{
 .sneaker-info-price-actual{
     font-size: 20pt;
     color: var(--black);
-    /* font-style: bold; */
 }
 
 .sneaker-info-price-discount{
@@ -205,6 +207,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sneaker-info-price-discount p{
+    font-style: bold;
 }
 
 .sneaker-info-price-old{
@@ -304,10 +310,12 @@ body{
 
 .sneaker-chart-add-to-cart p{
     color: var(--white);
+    font-weight: bold;
 }
 
 .sneaker-chart-add-icon img{
     color: var(--white);
+    width: 100%;
     /* background-color: var(--white); */
 }
 
