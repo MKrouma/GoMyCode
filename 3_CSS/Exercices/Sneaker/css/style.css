@@ -18,7 +18,8 @@ body{
     --dark-grayish-blue: hsl(219, 9%, 45%);
     --grayish-blue : hsl(220, 14%, 75%);
     --light-grayish-blue : hsl(223, 64%, 98%);
-    --black : hsl(0, 0%, 0%)
+    --black : hsl(0, 0%, 0%);
+    --white : hsl(0, 0%, 100%)
 }
 
 .nav{
@@ -158,7 +159,7 @@ body{
 }
 
 .sneaker-edition{
-    /* font-family: 'Kumbh Sans', sans-serif; */
+    font-family: 'Kumbh Sans', sans-serif;
     font-size: 28pt;
     color: var(--black);
     font-style: bold;
@@ -204,10 +205,112 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .sneaker-info-price-old{
     /* font-size: 20pt; */
     color: var(--grayish-blue);
+}
+
+.sneaker-info-chart{
+    /* border: 1px solid red; */
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.sneaker-chart-number{
+    /* border: 1px solid red; */
+    width: 30%;
+    height: 80%;
+    background-color: var(--light-grayish-blue);
+    border-radius: 0.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.sneaker-chart-add{
+    border: 1px solid red;
+    width: 60%;
+    height: 80%;
+    margin-left: 1.5rem;
+
+    background-color: var(--orange);
+    border-radius: 0.4rem;
+    border-color: var(--orange);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker-chart-number-minus {
+    /* border: 1px solid red; */
+    width: 35%;
+    height: 100%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker-chart-number-minus img{
+    width: 30%;
+    height: 10%;
+}
+
+.sneaker-chart-number-plus {
+    /* border: 1px solid red; */
+    width: 35%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker-chart-number-plus img{
+    width: 32%;
+    height: 30%;
+}
+
+.sneaker-chart-number-text {
+    /* border: 1px solid red; */
+    width: 35%;
+    height: 100%;
+    font-style: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker-chart-add-icon{
+    /* border: 1px solid red; */
+    width: 1.5rem;
+    color: var(--white);
+}
+
+.sneaker-chart-add-to-cart{
+    /* border: 1px solid red; */
+    width: 5rem;
+    margin-left: 1rem;
+}
+
+.sneaker-chart-add-to-cart p{
+    color: var(--white);
+}
+
+.sneaker-chart-add-icon img{
+    color: var(--white);
+    /* background-color: var(--white); */
+}
+
+.sneakers-img-minis-thumbail-1 img{
+    background-color: var(--white);
 }
