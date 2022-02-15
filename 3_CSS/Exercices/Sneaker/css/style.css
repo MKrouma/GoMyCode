@@ -180,7 +180,7 @@ body{
     height : 10%;
 
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: start;
 }
 
@@ -194,9 +194,17 @@ body{
     background-color: var(--pale-orange);
     color: var(--orange);
     font-style: bold;
-    width:8%;
-    text-align: justify;
-    text-justify: inter-word;
+    width: 2.5rem;
+    height: 1.5rem;
+    text-align: center;
+    /* text-justify: inter-word; */
+    margin-left: 1rem;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .sneaker-info-price-old{
