@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --violet-color : #7b2cbf;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    margin-top: 1rem;
+}
+
+
+/* nav bar  */
+/* .container, .nav-bar, .nav-bar-left, .nav-bar-right{
+    border: 1px solid red;
+} */
+
+.container{
+    margin: 0 200px 0 200px;
+    height: 1000px;
+}
+
+.nav-bar{
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-left{
+    width: 80%;
+    color: var(--violet-color);
+
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.nav-bar-right{
+    width: 20%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar-right-link{
+    margin-left: 0px;
+}
+
+.nav-bar-right-link a{
+    text-decoration: none;
+}
+
+
+/* about section  */
+/* .about, .about-left, .about-right, .about-left-name, .about-left-position, .about-left-contact,
+.about-right-img-div{
+    border: 1px solid red;
+} */
+
+.about{
+    height : 310px;
+    margin: 1rem 0 1rem 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 0.5rem;
+}
+
+.about-left{
+    height:100%;
+    width: 65%;
+}
+
+.about-right{
+    height:100%;
+    width: 35%;
+}
+
+.about-left-name{
+    width: 60%;
+    height: 60%;
+
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.about-left-position{
+    width: 100%;
+    height: 10%;
+    margin-top: 1rem;
+}
+
+.about-left-contact{
+    width: 150px;
+    height: 50px;
+    margin-top: 1rem;
+    text-align: center;
+
+    background: none;
+    border-style: outset;
+
+    box-shadow: 0.3em 0.3em var(--violet-color), inset 0.3em 0.3em var(--violet-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-left-contact:hover{
+    box-shadow: 0em 0em var(--violet-color), inset 0em 0em var(--violet-color);
+}
+
+.about-right-img-div{
+    overflow: hidden;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    border: 0.2rem solid var(--violet-color);
+}
+
+.about-right-img-div img{
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.5rem solid white;
+}
