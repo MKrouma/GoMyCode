@@ -17,6 +17,11 @@ body{
     margin-top: 1rem;
 }
 
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+
 button{
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
@@ -167,7 +172,7 @@ button{
     border: 1px solid red;
 } */
 .experiences{
-    height: 500px;
+    height: 450px;
     background-color: var(--gray-own);
 }
 
@@ -242,7 +247,7 @@ button{
 
 .right-card-div{
     width: 80%;
-    height: 45%;
+    height: 40%;
     margin-bottom: 1rem;
 }
 
@@ -408,8 +413,85 @@ button{
 
 
 /* hackhaton  */
+/* .hackhaton, .hackhaton-right, .hackhaton-left,
+.hackhaton-right-title, .hackhaton-right-text, .hackhaton-right-gplay,
+.hackhaton-right-gplay-ha{
+    border: 1px solid red;
+} */
+
 .hackhaton{
-    height: 250px;
+    height: 500px;
+    margin : 50px 150px 0 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hackhaton-left {
+    width: 50%;
+    height: 80%;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+}
+
+.hackhaton-left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.hackhaton-right {
+    width: 50%;
+    height: 80%;
+
+    padding: 0 0 0 10px;
+}
+
+.hackhaton-right-title{
+    height: 20%
+}
+
+.hackhaton-right-title{
+    height: 20%;
+} 
+
+.hackhaton-right-title p{
+    color : var(--violet-color);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hackhaton-right-text{
+    height: 60%;
+}
+
+.hackhaton-right-text p{
+    margin-top : 15px;
+    color: #7C7894;
+}
+.hackhaton-right-gplay{
+    height: 15%;
+    width: 35%;
+
+    margin: 0 25% 0 25%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hackhaton-right-gplay-ha{
+    width: 100%;
+    height: 100%;
+}
+
+.hackhaton-right-gplay-ha img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 
