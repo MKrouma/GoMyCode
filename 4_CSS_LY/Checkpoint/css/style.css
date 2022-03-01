@@ -17,6 +17,13 @@ body{
     margin-top: 1rem;
 }
 
+button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    border: none;
+    background-color: Transparent;
+}
+
 
 /* nav bar  */
 /* .container, .nav-bar, .nav-bar-left, .nav-bar-right{
@@ -160,13 +167,13 @@ body{
     border: 1px solid red;
 } */
 .experiences{
-    height: 430px;
+    height: 500px;
     background-color: var(--gray-own);
 }
 
 .go-gif{
     width: 100%;
-    height: 30%;
+    height: 35%;
 
     display: flex;
     justify-content: center;
@@ -179,7 +186,7 @@ body{
     margin: 0 0.2em 0 0.2em;
 }
 .experiences-infos{
-    height: 80%;
+    height: 75%;
     margin: 5rem 7rem 2rem 7rem;
 
     display: flex;
@@ -221,8 +228,8 @@ body{
 }
 
 .right-card{
-    width: 250px;
-    height: 220px;
+    width: 280px;
+    height: 250px;
 
     background-color: white;
     border-radius: 10px;
@@ -230,13 +237,22 @@ body{
     display: flex;
     align-items: end;
     justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .right-card-div{
     width: 80%;
-    height: 40%;
+    height: 45%;
     margin-bottom: 1rem;
 }
+
+.fa-solid.fa-compass-drafting, .fa-solid.fa-desktop, 
+.fa-solid.fa-bolt-lightning{
+    color : var(--violet-color);
+    font-size: 25px;
+    margin-bottom: 0.8em;
+} 
+
 
 .product{
     color: var(--violet-color);
@@ -245,6 +261,8 @@ body{
 
 .discover{
     color: white;
+    font-size: 16px;
+    border: none;
 }
 
 .right-card:hover{
@@ -260,6 +278,15 @@ body{
     transition: all 0.3s;
 }
 
+.right-card:hover .discover{
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.right-card:hover .fa-solid{
+    color: white;
+}
+
 
 /* projects  */
 /* .projects, .projects-explore, .projects-illustration,
@@ -269,10 +296,14 @@ body{
 
 .projects{
     height: 1000px;
-    margin : 200px 150px 0 150px;
+    margin : 300px 150px 0 150px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-explore{
+    width: 100%;
     height: 15%;
 
     display: flex;
@@ -314,10 +345,62 @@ body{
 }
 
 
+/* project illustration  */
+/* .projects, .projects-explore, .projects-illustration,
+.projects-illustration-exemple{
+    border: 1px solid red;
+} */
+
 .projects-illustration{
-    height: 75%;
+    margin-top: 5rem;
+    width: 100%;
+    height: 85%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
+.projects-illustration-exemple{
+    width : 31%;
+    height : 46%;
+    border-radius: 3px;
+
+    transition: ease-in-out 3s;
+    background-position: top;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.projects-illustration-exemple.box1-1{
+    background-image: url("../images/image1-hover.jpeg");
+    background-size: cover;
+}
+.projects-illustration-exemple.box1-2{
+    background-image: url("../images/image1-hover.jpeg");
+    background-size: cover;
+}
+.projects-illustration-exemple.box1-3{
+    background-image: url("../images/image3-hover.jpg");
+    background-size: cover;
+}
+.projects-illustration-exemple.box2-1{
+    background-image: url("../images/image4-hover.jpeg");
+    background-size: cover;
+}
+.projects-illustration-exemple.box2-2{
+    background-image: url("../images/image5-hover.jpeg");
+    background-size: cover;
+}
+.projects-illustration-exemple.box2-3{
+    background-image: url("../images/image6-hover.jpg");
+    background-size: cover;
+}
+
+.projects-illustration-exemple:hover{
+    background-position: bottom;
+}
 
 
 
