@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Checkpoint</title>
+    <link rel="stylesheet" href="statics/style.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="main-c-content">
+            <div class="panier">
+                <p>Panier</p>
+            </div>
+
+            <div class="article">
+                <div class="article-container">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Nom de l'article</th>
+                                <th>Quantite</th>
+                                <th>Prix unitaire</th>
+                                <th>Sous total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button class="minus-plus-btn">-</button>
+                                    <input type="text" class="tbody-quantity" placeholder="0" width="30px">
+                                    <button class="minus-plus-btn">+</button>
+                                </td>
+                                <td><span>15 000</span> fr</td>
+                                <td class="sub-total"><span>15 000</span> fr</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td><input type="text" placeholder="Nom de l'article"></td>
+                                <td><input type="text" class="tfoot-quantity" placeholder="1000"></td>
+                                <td></td>
+                                <td><button class="add-btn">Ajouter un article</button></td>
+                            </tr>
+                        </tfoot>
+                    </table> 
+                </div>
+            </div>
+
+            <div class="total">
+                <div class="total-text">
+                    Total : <span>62000 fr cfa</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+</body>
+</html>
