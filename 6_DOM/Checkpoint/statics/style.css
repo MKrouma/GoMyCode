@@ -111,6 +111,11 @@ th{
     border: none;
 
     background-color: gray;
+    
+}
+
+.minus-plus-btn:hover{
+    cursor: pointer;
 }
 
 .tbody-quantity{
