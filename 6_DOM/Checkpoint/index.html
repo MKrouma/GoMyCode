@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Checkpoint</title>
     <link rel="stylesheet" href="statics/style.css">
+    <script src="statics/main.js"></script>
+
+    <script>
+        var el = document.getElementsByClassName('minus-btn');
+        console.log('el:', el);
+
+        var elTbody = document.getElementsByClassName('tbody-quantity')
+        var elValue = elTbody.getAttribute('value');
+        console.log("tbody quantityt value", elTbody);
+
+    </script>
 </head>
 <body>
     <main class="main-container">
@@ -37,9 +48,9 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <button class="minus-plus-btn">-</button>
-                                    <input type="text" class="tbody-quantity" placeholder="0" width="30px">
-                                    <button class="minus-plus-btn">+</button>
+                                    <button class="minus-plus-btn minus-btn" onclick=quantityMinus>-</button>
+                                    <input type="text" class="tbody-quantity" width="30px" value="1">
+                                    <button class="minus-plus-btn plus-btn">+</button>
                                 </td>
                                 <td><span>15 000</span> fr</td>
                                 <td class="sub-total"><span>15 000</span> fr</td>
@@ -65,6 +76,5 @@
 
         </div>
     </main>
-    
 </body>
 </html>
