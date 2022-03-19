@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Checkpoint</title>
-    <link rel="stylesheet" href="statics/style.css">
-    <script src="statics/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
-    <script>
+    <!-- <script>
         var el = document.getElementsByClassName('minus-btn');
         console.log('el:', el);
 
@@ -16,7 +15,7 @@
         var elValue = elTbody.getAttribute('value');
         console.log("tbody quantityt value", elTbody);
 
-    </script>
+    </script> -->
 </head>
 <body>
     <main class="main-container">
@@ -37,7 +36,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="product">
                                 <td>
                                     <div class="article-name">
                                         <div class="article-img"><img src="res/marmite.jpg" alt=""></div>
@@ -49,17 +48,17 @@
                                 </td>
                                 <td>
                                     <button class="minus-plus-btn minus-btn" onclick=quantityMinus>-</button>
-                                    <input type="text" class="tbody-quantity" width="30px" value="1">
+                                    <input type="text" class="quantity" width="30px" value="1">
                                     <button class="minus-plus-btn plus-btn">+</button>
                                 </td>
-                                <td><span>15 000</span> fr</td>
-                                <td class="sub-total"><span>15 000</span> fr</td>
+                                <td class="price"><span>15000</span> fr</td>
+                                <td class="subtotal"><span>15000</span> fr</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td><input type="text" placeholder="Nom de l'article"></td>
-                                <td><input type="text" class="tfoot-quantity" placeholder="1000"></td>
+                                <td><input type="text" class="tfoot-quantity" value="1000"></td>
                                 <td></td>
                                 <td><button class="add-btn">Ajouter un article</button></td>
                             </tr>
@@ -70,11 +69,13 @@
 
             <div class="total">
                 <div class="total-text">
-                    Total : <span>62000 fr cfa</span>
+                    Total : <span>62000</span> fr cfa
                 </div>
             </div>
 
         </div>
     </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

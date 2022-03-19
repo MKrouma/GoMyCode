@@ -15,7 +15,7 @@ body{
 }
 
 :root{
-    --blue-own: #0077b6;
+    --blue-own: #42a5f5;
 }
 
 /* .main-container, .main-c-content, .panier, .article, .total{
@@ -116,9 +116,10 @@ th{
 
 .minus-plus-btn:hover{
     cursor: pointer;
+    background-color: var(--blue-own);
 }
 
-.tbody-quantity{
+.quantity{
     width: 100px;
     height: 40px;
 }
@@ -146,6 +147,10 @@ th{
     color: red;
 }
 
+.supp-btn:hover{
+    cursor: pointer;
+}
+
 .article-img{
     width: 120px;
     height: 120px;
@@ -160,7 +165,7 @@ th{
     width: 70px;
 }
 
-.sub-total{
+.subtotal{
     color: var(--blue-own);
     font-weight: bold;
 }
