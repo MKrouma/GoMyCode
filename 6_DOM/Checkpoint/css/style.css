@@ -165,17 +165,26 @@ th{
     width: 70px;
 }
 
+.tfoot-price{
+    width: 100px;
+}
+
 .subtotal{
     color: var(--blue-own);
     font-weight: bold;
 }
 
-.add-btn{
+#add-product{
     background-color: var(--blue-own);
+    color: white;
     width: 150px;
     height: 1.5rem;
     border: none;
     border-radius: 10px;
+}
+
+#add-product:hover{
+    cursor: pointer;
 }
 
 .fill{

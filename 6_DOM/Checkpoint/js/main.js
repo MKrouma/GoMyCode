@@ -70,7 +70,93 @@ function addRemoveListeners() {
 }
 
 
+// 4. Add new product
+function createProduct(event) {
+
+  // get addBtn parent tr
+  const createProductRow = event.currentTarget.parentNode.parentNode;
+  console.log("Parent tr", createProductRow)
+
+  // get nameElement and quantElement
+  const nameInputElement = createProductRow.querySelector('input[type=text]');
+  const quantityInputElement = createProductRow.querySelector('input.tfoot-quantity');
+  const priceInputElement = createProductRow.querySelector('input.tfoot-price');
+
+  const name = nameInputElement.value;
+  const quantity = quantityInputElement.value;
+  const price = priceInputElement.value;
+
+  console.log("Input name", name)
+  console.log("Input quantity", quantity)
+  console.log("Input price", price)
+
+  // New product all HTML
+  // const newProductRow = `
+  // <tr class="product">
+  // <td class="name">
+  //   <span>${name}</span>
+  // </td>
+  // <td class="price">$<span>${price}</span></td>
+  // <td class="quantity">
+  //   <input type="number" value="0" min="0" placeholder="Quantity" />
+  // </td>
+  // <td class="subtotal">$<span>0</span></td>
+  // <td class="action">
+  //   <button class="btn btn-remove">Remove</button>
+  // </td>
+  // </tr>
+  // `;
+
+  const newProductRow = `
+  <tr class="product">
+    <td>
+        <div class="article-name">
+            <div class="article-img"><img src="res/marmite.jpg" alt=""></div>
+            <div class="article-name-supp">
+                <p>${name}</p>
+                <p><button class="supp-btn">Supprimer</button></p>
+            </div>
+        </div>
+    </td>
+    <td>
+        <button class="minus-plus-btn minus-btn" onclick=quantityMinus>-</button>
+        <input type="text" class="quantity" width="30px" value=${quantity}>
+        <button class="minus-plus-btn plus-btn">+</button>
+    </td>
+    <td class="price"><span>${price}</span> fr</td>
+    <td class="subtotal"><span>$</span> fr</td>
+  </tr>
+  `;
+
+  // Cria o elemento do DOM
+  const trElement = document.createElement('tr');
+  trElement.className = 'product';
+
+  // Configura o elemento do DOM para ter o conteúdo de novo produto criado anteriormente
+  trElement.innerHTML = newProductRow;
+
+  // Seleciona o elemento <tbody> que tem todos os produtos
+  const tbodyElement = createProductRow.parentNode.previousElementSibling;
+
+  // Adiciona o elemento do novo produto à <tbody>
+  tbodyElement.appendChild(trElement);
+  // tbodyElement.innerHTML += newProductRow;
+
+  // Adicionar o event listener no botão remove para o produto recém criado
+  addRemoveListeners();
+  calculateAll();
+}
+
+
+function addCreateListeners() {
+  const createBtnElement = document.getElementById('add-product');
+  createBtnElement.addEventListener('click', createProduct);
+  console.log("New Product", createBtnElement)
+}
+
+
 
 // RUNNING
 calculateAll()
 addRemoveListeners()
+addCreateListeners()
