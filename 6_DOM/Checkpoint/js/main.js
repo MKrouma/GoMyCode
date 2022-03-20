@@ -16,7 +16,7 @@ function updateSubtotal(product) {
     subtotalElement.innerText = subtotal; //.toFixed(2);
   
     return subtotal;
-  }
+}
 
 
 // 2. Calculate ALL
@@ -92,22 +92,6 @@ function createProduct(event) {
   console.log("Input price", price)
 
   // New product all HTML
-  // const newProductRow = `
-  // <tr class="product">
-  // <td class="name">
-  //   <span>${name}</span>
-  // </td>
-  // <td class="price">$<span>${price}</span></td>
-  // <td class="quantity">
-  //   <input type="number" value="0" min="0" placeholder="Quantity" />
-  // </td>
-  // <td class="subtotal">$<span>0</span></td>
-  // <td class="action">
-  //   <button class="btn btn-remove">Remove</button>
-  // </td>
-  // </tr>
-  // `;
-
   const newProductRow = `
   <tr class="product">
     <td>
@@ -129,24 +113,28 @@ function createProduct(event) {
   </tr>
   `;
 
-  // Cria o elemento do DOM
+  // Create DOM Html element
   const trElement = document.createElement('tr');
   trElement.className = 'product';
 
-  // Configura o elemento do DOM para ter o conteúdo de novo produto criado anteriormente
+  // tbody innerHTML append newProduct
   trElement.innerHTML = newProductRow;
 
-  // Seleciona o elemento <tbody> que tem todos os produtos
+  // Fetch tbody parent of tr
   const tbodyElement = createProductRow.parentNode.previousElementSibling;
 
-  // Adiciona o elemento do novo produto à <tbody>
+  // add new product tr in tbody
   tbodyElement.appendChild(trElement);
-  // tbodyElement.innerHTML += newProductRow;
 
-  // Adicionar o event listener no botão remove para o produto recém criado
+  // Listeners 
   addMinusPlusListeners();
   addRemoveListeners();
   calculateAll();
+
+  // Clear
+  nameInputElement.value = "";
+  quantityInputElement.value = "1";
+  priceInputElement.value = 0;
   
 }
 

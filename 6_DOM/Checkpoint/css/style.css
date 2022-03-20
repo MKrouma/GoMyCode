@@ -24,7 +24,7 @@ body{
 
 .main-container{
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
 
     background-color: black;
 
@@ -99,6 +99,14 @@ table{
     text-align: left;
 }
 
+thead tr{
+    border-bottom: 20px solid white;
+}
+
+tbody td{
+    top: 5rem;
+}
+
 th{
     /* font-weight: normal; */
     font-size: 17px;
@@ -159,6 +167,10 @@ th{
 .article-img img{
     width: 100%;
     height: 100%;
+}
+
+.tfoot-container{
+    margin-top: 20px;
 }
 
 .tfoot-quantity{
