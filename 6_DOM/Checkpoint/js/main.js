@@ -53,6 +53,7 @@ function removeProduct(event) {
 
   tableElement.removeChild(currentRow);
 
+  addMinusPlusListeners();
   calculateAll();
 }
 
@@ -119,7 +120,7 @@ function createProduct(event) {
         </div>
     </td>
     <td>
-        <button class="minus-plus-btn minus-btn" onclick=quantityMinus>-</button>
+        <button class="minus-plus-btn minus-btn">-</button>
         <input type="text" class="quantity" width="30px" value=${quantity}>
         <button class="minus-plus-btn plus-btn">+</button>
     </td>
@@ -143,8 +144,10 @@ function createProduct(event) {
   // tbodyElement.innerHTML += newProductRow;
 
   // Adicionar o event listener no botão remove para o produto recém criado
+  addMinusPlusListeners();
   addRemoveListeners();
   calculateAll();
+  
 }
 
 
@@ -155,8 +158,57 @@ function addCreateListeners() {
 }
 
 
+// 5. Minus & plus 
+function minusQuantity(event) {
+  console.log("Developping minus func")
+  const minusQuantityElement = event.currentTarget
+  const quantityElement = minusQuantityElement.parentNode.querySelector('input.quantity');
+
+  var quantity = parseInt(quantityElement.value);
+  console.log("Actual quantity", quantity);
+
+  if (quantity > 0) {
+    quantity = quantity - 1;
+  } else {
+    console.log("Quantity set to Zero");
+  }
+
+  quantityElement.value =  parseInt(quantity);
+
+  calculateAll();
+}
+
+function plusQuantity(event) {
+  console.log("Developping minus func")
+  const minusQuantityElement = event.currentTarget
+  const quantityElement = minusQuantityElement.parentNode.querySelector('input.quantity');
+
+  var quantity = parseInt(quantityElement.value);
+  console.log("Actual quantity", quantity);
+
+  quantity = quantity + 1;
+  quantityElement.value =  parseInt(quantity);
+
+  calculateAll();
+}
+
+function addMinusPlusListeners() {
+  // minus listeners
+  const allMinusBtnElement = document.querySelectorAll('button.minus-btn');
+  console.log("Length", allMinusBtnElement)
+  for (let minusBtnElement of allMinusBtnElement) {
+    minusBtnElement.addEventListener('click', minusQuantity);
+  }
+
+  // plus listeners
+  const allPlusBtnElement = document.querySelectorAll('button.plus-btn');
+  for (let plusBtnElement of allPlusBtnElement) {
+    plusBtnElement.addEventListener('click', plusQuantity);
+  }
+}
 
 // RUNNING
-calculateAll()
-addRemoveListeners()
-addCreateListeners()
+addMinusPlusListeners();
+calculateAll();
+addRemoveListeners();
+addCreateListeners();
